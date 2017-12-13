@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>findprimefactors</title>
+</head>
+<body id="body">
+	<label>ENTER THE NUMBER</label>
+<input type="text" id="input">
+<button onclick="findpf()">SHOW PRIME FACTORS</button>
+<p id="output"></p>
+
+<script type="text/javascript">
+	function findpf(){
+	var val= document.getElementById('input').value;	
+	var value=val;
+     var factors= [];
+     divisor=2;
+
+     while(val>2){
+
+     	if(val % divisor == 0){
+       factors.push(divisor); 
+       val= val/ divisor;
+    }
+    else{
+      divisor++;
+    }     
+    
+
+     }
+
+
+    
+	document.getElementById("output").innerHTML="THE PRIME FACTORS OF&nbsp;"+value+":&nbsp;"+ factors.toString();
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+</script>
+</body>
+</html>
